@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playboy Ring | Luck & Dice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container"><a href="index.html"><img src="1.png" alt="Luck & Dice Logo"></a></div>
+        <nav><ul><li><a href="index.html#jewelry">Jewelry</a></li><li><a href="index.html#accessories">Accessories</a></li><li><a href="#">Cart (0)</a></li></ul></nav>
+    </header>
+    <main class="producto-detalle-container">
+        <div class="producto-galeria">
+            <div class="foto-principal"><img src="playboyring-1.png" alt="Playboy Ring Main"></div>
+            <div class="miniaturas"><img src="playboyring-1.png" alt="Thumb 1" class="activa"><img src="playboyring-2.png" alt="Thumb 2"><img src="playboyring-3.png" alt="Thumb 3"></div>
+        </div>
+        <div class="producto-info-box">
+            <div class="migas-pan"><a href="index.html">Home</a> / <a href="index.html#jewelry">Jewelry</a> / Playboy Ring</div>
+            <h1 class="producto-titulo">Playboy Ring</h1>
+            <p class="producto-precio">€160.00</p>
+            <p class="producto-descripcion">Solid 925 sterling silver signet ring inspired by pop culture. Mirror polished surface with inverted relief icon.</p>
+            <div class="selector-talla">
+                <label for="tallas">Select your size (US):</label>
+                <select id="tallas" name="tallas"><option value="7">Size 7</option><option value="8">Size 8</option><option value="9">Size 9</option></select>
+                <a href="#" class="guia-tallas">Size Guide</a>
+            </div>
+            <button class="btn-comprar">Add to Cart</button>
+            <div class="detalles-tecnicos"><ul><li><strong>Material:</strong> 925 Sterling Silver</li><li><strong>Weight:</strong> Approx. 22g</li><li><strong>Shipping:</strong> 3-5 business days</li></ul></div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col newsletter-col">
+                <h4>NEWSLETTER</h4><form class="newsletter-form"><input type="email" placeholder="Email" required><button type="submit">SUBSCRIBE</button></form>
+                <div class="region-selector"><select><option value="eu">EUROPE (EUR €)</option></select></div><div class="footer-copy"><p>LUCK & DICE © 2026.</p></div>
+            </div>
+            <div class="footer-col"><h4>HELP</h4><ul><li><a href="#">Contact Us</a></li></ul></div>
+        </div>
+    </footer>
+</body>
+</html>

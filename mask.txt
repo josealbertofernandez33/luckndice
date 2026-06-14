@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masks Bracelet | Luck & Dice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container"><a href="index.html"><img src="1.png" alt="Luck & Dice Logo"></a></div>
+        <nav><ul><li><a href="index.html#jewelry">Jewelry</a></li><li><a href="index.html#accessories">Accessories</a></li><li><a href="#">Cart (0)</a></li></ul></nav>
+    </header>
+    <main class="producto-detalle-container">
+        <div class="producto-galeria">
+            <div class="foto-principal"><img src="masks-1.png" alt="Masks Bracelet Main"></div>
+            <div class="miniaturas"><img src="masks-1.png" alt="Thumb 1" class="activa"><img src="masks-2.png" alt="Thumb 2"><img src="masks-3.png" alt="Thumb 3"></div>
+        </div>
+        <div class="producto-info-box">
+            <div class="migas-pan"><a href="index.html">Home</a> / <a href="index.html#jewelry">Jewelry</a> / Masks Bracelet</div>
+            <h1 class="producto-titulo">Masks Bracelet</h1>
+            <p class="producto-precio">€210.00</p>
+            <p class="producto-descripcion">Heavy link bracelet featuring alternating tragedy and comedy masks. Forged entirely in solid 925 sterling silver with a secure, custom-made lobster clasp.</p>
+            <div class="selector-talla">
+                <label for="tallas">Select length:</label>
+                <select id="tallas" name="tallas"><option value="18">18 cm (7.1")</option><option value="20">20 cm (7.9")</option><option value="22">22 cm (8.6")</option></select>
+                <a href="#" class="guia-tallas">Size Guide</a>
+            </div>
+            <button class="btn-comprar">Add to Cart</button>
+            <div class="detalles-tecnicos"><ul><li><strong>Material:</strong> 925 Sterling Silver</li><li><strong>Weight:</strong> Approx. 45g</li><li><strong>Shipping:</strong> 3-5 business days</li></ul></div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col newsletter-col">
+                <h4>NEWSLETTER</h4><form class="newsletter-form"><input type="email" placeholder="Email" required><button type="submit">SUBSCRIBE</button></form>
+                <div class="region-selector"><select><option value="eu">EUROPE (EUR €)</option></select></div><div class="footer-copy"><p>LUCK & DICE © 2026.</p></div>
+            </div>
+            <div class="footer-col"><h4>HELP</h4><ul><li><a href="#">Contact Us</a></li></ul></div>
+        </div>
+    </footer>
+</body>
+</html>
