@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Patch Cap | Luck & Dice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container"><a href="index.html"><img src="1.png" alt="Luck & Dice Logo"></a></div>
+        <nav><ul><li><a href="index.html#jewelry">Jewelry</a></li><li><a href="index.html#accessories">Accessories</a></li><li><a href="#">Cart (0)</a></li></ul></nav>
+    </header>
+    <main class="producto-detalle-container">
+        <div class="producto-galeria">
+            <div class="foto-principal"><img src="cap2-1.png" alt="Vintage Cap Main"></div>
+            <div class="miniaturas"><img src="cap2-1.png" alt="Thumb 1" class="activa"><img src="cap2-2.png" alt="Thumb 2"><img src="cap2-3.png" alt="Thumb 3"></div>
+        </div>
+        <div class="producto-info-box">
+            <div class="migas-pan"><a href="index.html">Home</a> / <a href="index.html#accessories">Accessories</a> / Vintage Patch Cap</div>
+            <h1 class="producto-titulo">Vintage Patch Cap</h1>
+            <p class="producto-precio">€45.00</p>
+            <p class="producto-descripcion">Custom vintage trucker cap featuring unique embroidered patches. Distressed details on the brim for an authentic worn-in look. Limited edition run.</p>
+            <div class="selector-talla">
+                <label for="tallas">Size:</label>
+                <select id="tallas" name="tallas" disabled><option value="os">One Size Fits All</option></select>
+            </div>
+            <button class="btn-comprar">Add to Cart</button>
+            <div class="detalles-tecnicos"><ul><li><strong>Material:</strong> Cotton Blend & Mesh</li><li><strong>Style:</strong> Distressed Trucker</li></ul></div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col newsletter-col">
+                <h4>NEWSLETTER</h4><form class="newsletter-form"><input type="email" placeholder="Email" required><button type="submit">SUBSCRIBE</button></form>
+                <div class="region-selector"><select><option value="eu">EUROPE (EUR €)</option></select></div><div class="footer-copy"><p>LUCK & DICE © 2026.</p></div>
+            </div>
+            <div class="footer-col"><h4>HELP</h4><ul><li><a href="#">Contact Us</a></li></ul></div>
+        </div>
+    </footer>
+</body>
+</html>
