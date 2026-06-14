@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luck & Dice | Tattoo Artists & Creators</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a onclick="cambiarVista('vista-inicio')"><img src="1.png" alt="Luck & Dice Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a onclick="cambiarVista('vista-inicio', 'jewelry')">Jewelry</a></li>
+                <li><a onclick="cambiarVista('vista-inicio', 'accessories')">Accessories</a></li>
+                <li><a onclick="cambiarVista('vista-checkout')">Bag (<span id="nav-bag-count" class="nav-bag-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="vista-inicio" class="vista activa">
+        <section class="hero">
+            <h1>Jewelry & Accessories</h1>
+            <button class="btn" onclick="document.getElementById('jewelry').scrollIntoView({behavior: 'smooth'})">SHOP NOW</button>
+        </section>
+
+        <section id="jewelry" class="seccion-productos">
+            <h2 class="section-title">Jewelry</h2>
+            <div class="grid-productos">
+                <a onclick="cambiarVista('vista-horsering')" class="producto-card">
+                    <img src="horsering-1.png" alt="Horse Signet Ring">
+                    <div class="producto-info">
+                        <h3>Horse Ring</h3>
+                        <p>925 Sterling Silver</p>
+                    </div>
+                </a>
+                <a onclick="cambiarVista('vista-playboyring')" class="producto-card">
+                    <img src="playboyring-1.png" alt="Playboy Signet Ring">
+                    <div class="producto-info">
+                        <h3>Playboy Ring</h3>
+                        <p>925 Sterling Silver</p>
+                    </div>
+                </a>
+                <a onclick="cambiarVista('vista-horseshoering')" class="producto-card">
+                    <img src="horseshoering-1.png" alt="Horseshoe Signet Ring">
+                    <div class="producto-info">
+                        <h3>Horseshoe Ring</h3>
+                        <p>925 Sterling Silver</p>
+                    </div>
+                </a>
+                <a onclick="cambiarVista('vista-masks')" class="producto-card">
+                    <img src="mask-1.png" alt="Masks Bracelet">
+                    <div class="producto-info">
+                        <h3>Masks Bracelet</h3>
+                        <p>925 Sterling Silver</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="banner-separador">
+            <img src="gorras.png" alt="Caps Lifestyle">
+            <img src="totebag.png" alt="Tote Bag Lifestyle">
+            <img src="bag.png" alt="Bag Lifestyle">
+        </section>
+
+        <section id="accessories" class="seccion-productos">
+            <h2 class="section-title">Accessories</h2>
+            <div class="grid-productos">
+                <a onclick="cambiarVista('vista-cap1')" class="producto-card">
+                    <img src="cap1-1.png" alt="NY Classic Cap">
+                    <div class="producto-info">
+                        <h3>NY Classic Cap</h3>
+                        <p>Textile</p>
+                    </div>
+                </a>
+                <a onclick="cambiarVista('vista-cap2')" class="producto-card">
+                    <img src="cap2-1.png" alt="Vintage Cap">
+                    <div class="producto-info">
+                        <h3>Vintage Patch Cap</h3>
+                        <p>Textile</p>
+                    </div>
+                </a>
+                <a onclick="cambiarVista('vista-bag-product')" class="producto-card">
+                    <img src="bag-1.png" alt="Tattoo Tote Bag">
+                    <div class="producto-info">
+                        <h3>Flash Tote Bag</h3>
+                        <p>100% Cotton Canvas</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <div id="vista-horsering" class="vista">
+        <main class="producto-detalle-container">
+            <div class="producto-galeria">
+                <div class="foto-principal"><img id="main-horse" src="horsering-1.png" alt="Horse Ring Main"></div>
+                <div class="miniaturas">
+                    <img src="horsering-1.png" class="activa" onclick="cambiarImagen('horsering-1.png', this, 'main-horse')">
+                    <img src="horsering-2.png" onclick="cambiarImagen('horsering-2.png', this, 'main-horse')">
+                    <img src="horsering-3.png" onclick="cambiarImagen('horsering-3.png', this, 'main-horse')">
+                </div>
+            </div>
+            <div class="producto-info-box">
+                <div class="migas-pan"><a onclick="cambiarVista('vista-inicio')">Home</a> / <a onclick="cambiarVista('vista-inicio', 'jewelry')">Jewelry</a> / Horse Ring</div>
+                <h1 class="producto-titulo">Horse Ring</h1>
+                <p class="producto-precio">€145.00</p>
+                <p class="producto-descripcion">Classic signet ring forged in solid 925 sterling silver featuring a wild mustang design. Deep textured engraving with a dark oxidized finish.</p>
+                <div class="selector-talla">
+                    <label>Select your size (US):</label>
+                    <select id="size-horse"><option value="8">Size 8</option><option value="9">Size 9</option><option value="10">Size 10</option></select>
+                    <a href="#" class="guia-tallas">Size Guide</a>
+                </div>
+                <button class="btn-comprar" onclick="addToBag('Horse Ring', 145, 'main-horse', 'size-horse')">Add to Bag</button>
+                <div class="detalles-tecnicos"><ul><li><strong>Material:</strong> 925 Sterling Silver</li><li><strong>Weight:</strong> Approx. 18g</li></ul></div>
+            </div>
+        </main>
+    </div>
+
+    <div id="vista-playboyring" class="vista">
+        <main class="producto-detalle-container">
+            <div class="producto-galeria">
+                <div class="foto-principal"><img id="main-playboy" src="playboyring-1.png" alt="Playboy Ring Main"></div>
+                <div class="miniaturas">
+                    <img src="playboyring-1.png" class="activa" onclick="cambiarImagen('playboyring-1.png', this, 'main-playboy')">
+                    <img src="playboyring-2.png" onclick="cambiarImagen('playboyring-2.png', this, 'main-playboy')">
+                    <img src="playboyring-3.png" onclick="cambiarImagen('playboyring-3.png', this, 'main-playboy')">
+                </div>
+            </div>
+            <div class="producto-info-box">
+                <div class="migas-pan"><a onclick="cambiarVista('vista-inicio')">Home</a> / <a onclick="cambiarVista('vista-inicio', 'jewelry')">Jewelry</a> / Playboy Ring</div>
+                <h1 class="producto-titulo">Playboy Ring</h1>
+                <p class="producto-precio">€160.00</p>
+                <p class="producto-descripcion">Solid 925 sterling silver signet ring inspired by pop culture. Mirror polished surface with inverted relief icon.</p>
+                <div class="selector-talla">
+                    <label>Select your size (US):</label>
+                    <select id="size-playboy"><option value="7">Size 7</option><option value="8">Size 8</option><option value="9">Size 9</option></select>
+                    <a href="#" class="guia-tallas">Size Guide</a>
+                </div>
+                <button class="btn-comprar" onclick="addToBag('Playboy Ring', 160, 'main-playboy', 'size-playboy')">Add to Bag</button>
+                <div class="detalles-tecnicos"><ul><li><strong>Material:</strong> 925 Sterling Silver</li><li><strong>Weight:</strong> Approx. 22g</li></ul></div>
+            </div>
+        </main>
+    </div>
+
+    <div id="vista-horseshoering" class="vista">
+        <main class="producto-detalle-container">
+            <div class="producto-galeria">
+                <div class="foto-principal"><img id="main-horseshoe" src="horseshoering-1.png" alt="Horseshoe Ring Main"></div>
+                <div class="miniaturas">
+                    <img src="horseshoering-1.png" class="activa" onclick="cambiarImagen('horseshoering-1.png', this, 'main-horseshoe')">
+                    <img src="horseshoering-2.png" onclick="cambiarImagen('horseshoering-2.png', this, 'main-horseshoe')">
+                    <img src="horseshoering-3.png" onclick="cambiarImagen('horseshoering-3.png', this, 'main-horseshoe')">
+                </div>
+            </div>
+            <div class="producto-info-box">
+                <div class="migas-pan"><a onclick="cambiarVista('vista-inicio')">Home</a> / <a onclick="cambiarVista('vista-inicio', 'jewelry')">Jewelry</a> / Horseshoe Ring</div>
+                <h1 class="producto-titulo">Horseshoe Ring</h1>
+                <p class="producto-precio">€135.00</p>
+                <p class="producto-descripcion">Classic horseshoe signet ring forged in solid 925 sterling silver. Dark oxidized finish in the recesses to highlight the traditional engraving.</p>
+                <div class="selector-talla">
+                    <label>Select your size (US):</label>
+                    <select id="size-horseshoe"><option value="8">Size 8</option><option value="9">Size 9</option><option value="10">Size 10</option></select>
+                    <a href="#" class="guia-tallas">Size Guide</a>
+                </div>
+                <button class="btn-comprar" onclick="addToBag('Horseshoe Ring', 135, 'main-horseshoe', 'size-horseshoe')">Add to Bag</button>
+                <div class="detalles-tecnicos"><ul><li><strong>Material:</strong> 925 Sterling Silver</li><li><strong>Weight:</strong> Approx. 20g</li></ul></div>
+            </div>
+        </main>
+    </div>
+
+    <div id="vista-masks" class="vista">
+        <main class="producto-detalle-container">
+            <div class="producto-galeria">
+                <div class="foto-principal"><img id="main-mask" src="mask-1.png" alt="Masks Bracelet Main"></div>
+                <div class="miniaturas">
+                    <img src="mask-1.png" class="activa" onclick="cambiarImagen('mask-1.png', this, 'main-mask')">
+                    <img src="mask-2.png" onclick="cambiarImagen('mask-2.png', this, 'main-mask')">
+                    <img src="mask-3.png" onclick="cambiarImagen('mask-3.png', this, 'main-mask')">
+                </div>
+            </div>
+            <div class="producto-info-box">
+                <div class="migas-pan"><a onclick="cambiarVista('vista-inicio')">Home</a> / <a onclick="cambiarVista('vista-inicio', 'jewelry')">Jewelry</a> / Masks Bracelet</div>
+                <h1 class="producto-titulo">Masks Bracelet</h1>
+                <p class="producto-precio">€210.00</p>
+                <p class="producto-descripcion">Heavy link bracelet featuring alternating tragedy and comedy masks. Forged entirely in solid 925 sterling silver.</p>
+                <div class="selector-talla">
+                    <label>Select length:</label>
+                    <select id="size-mask"><option value="18 cm">18 cm (7.1")</option><option value="20 cm">20 cm (7.9")</option><option value="22 cm">22 cm (8.6")</option></select>
+                    <a href="#" class="guia-tallas">Size Guide</a>
+                </div>
+                <button class="btn-comprar" onclick="addToBag('Masks Bracelet', 210, 'main-mask', 'size-mask')">Add to Bag</button>
+                <div class="detalles-tecnicos"><ul><li><strong>Material:</strong> 925 Sterling Silver</li><li><strong>Weight:</strong> Approx. 45g</li></ul></div>
+            </div>
+        </main>
+    </div>
+
+    <div id="vista-cap1" class="vista">
+        <main class="producto-detalle-container">
+            <div class="producto-galeria">
+                <div class="foto-principal"><img id="main-cap1" src="cap1-1.png" alt="NY Cap Main"></div>
+                <div class="miniaturas">
+                    <img src="cap1-1.png" class="activa" onclick="cambiarImagen('cap1-1.png', this, 'main-cap1')">
+                    <img src="cap1-2.png" onclick="cambiarImagen('cap1-2.png', this, 'main-cap1')">
+                    <img src="cap1-3.png" onclick="cambiarImagen('cap1-3.png', this, 'main-cap1')">
+                </div>
+            </div>
+            <div class="producto-info-box">
+                <div class="migas-pan"><a onclick="cambiarVista('vista-inicio')">Home</a> / <a onclick="cambiarVista('vista-inicio', 'accessories')">Accessories</a> / NY Classic Cap</div>
+                <h1 class="producto-titulo">NY Classic Cap</h1>
+                <p class="producto-precio">€35.00</p>
+                <p class="producto-descripcion">Two-tone classic baseball cap with embroidered NY logo. Adjustable strap at the back.</p>
+                <div class="selector-talla">
+                    <label>Size:</label>
+                    <select id="size-cap1"><option value="OS">One Size Fits All</option></select>
+                </div>
+                <button class="btn-comprar" onclick="addToBag('NY Classic Cap', 35, 'main-cap1', 'size-cap1')">Add to Bag</button>
+                <div class="detalles-tecnicos"><ul><li><strong>Material:</strong> 100% Cotton Canvas</li><li><strong>Fit:</strong> Adjustable strapback</li></ul></div>
+            </div>
+        </main>
+    </div>
+
+    <div id="vista-cap2" class="vista">
+        <main class="producto-detalle-container">
+            <div class="producto-galeria">
+                <div class="foto-principal"><img id="main-cap2" src="cap2-1.png" alt="Vintage Cap Main"></div>
+                <div class="miniaturas">
+                    <img src="cap2-1.png" class="activa" onclick="cambiarImagen('cap2-1.png', this, 'main-cap2')">
+                    <img src="cap2-2.png" onclick="cambiarImagen('cap2-2.png', this, 'main-cap2')">
+                    <img src="cap2-3.png" onclick="cambiarImagen('cap2-3.png', this, 'main-cap2')">
+                </div>
+            </div>
+            <div class="producto-info-box">
+                <div class="migas-pan"><a onclick="cambiarVista('vista-inicio')">Home</a> / <a onclick="cambiarVista('vista-inicio', 'accessories')">Accessories</a> / Vintage Patch Cap</div>
+                <h1 class="producto-titulo">Vintage Patch Cap</h1>
+                <p class="producto-precio">€45.00</p>
+                <p class="producto-descripcion">Custom vintage trucker cap featuring unique embroidered patches. Distressed details on the brim for an authentic worn-in look.</p>
+                <div class="selector-talla">
+                    <label>Size:</label>
+                    <select id="size-cap2"><option value="OS">One Size Fits All</option></select>
+                </div>
+                <button class="btn-comprar" onclick="addToBag('Vintage Patch Cap', 45, 'main-cap2', 'size-cap2')">Add to Bag</button>
+                <div class="detalles-tecnicos"><ul><li><strong>Material:</strong> Cotton Blend & Mesh</li><li><strong>Style:</strong> Distressed Trucker</li></ul></div>
+            </div>
+        </main>
+    </div>
+
+    <div id="vista-bag-product" class="vista">
+        <main class="producto-detalle-container">
+            <div class="producto-galeria">
+                <div class="foto-principal"><img id="main-bag-product" src="bag-1.png" alt="Tote Bag Main"></div>
+                <div class="miniaturas">
+                    <img src="bag-1.png" class="activa" onclick="cambiarImagen('bag-1.png', this, 'main-bag-product')">
+                    <img src="bag-2.png" onclick="cambiarImagen('bag-2.png', this, 'main-bag-product')">
+                    <img src="bag-3.png" onclick="cambiarImagen('bag-3.png', this, 'main-bag-product')">
+                </div>
+            </div>
+            <div class="producto-info-box">
+                <div class="migas-pan"><a onclick="cambiarVista('vista-inicio')">Home</a> / <a onclick="cambiarVista('vista-inicio', 'accessories')">Accessories</a> / Flash Tote Bag</div>
+                <h1 class="producto-titulo">Flash Tote Bag</h1>
+                <p class="producto-precio">€25.00</p>
+                <p class="producto-descripcion">Heavy duty tote bag featuring an exclusive traditional tattoo flash print. Reinforced webbing handles. <strong>"Aquí llevo mis cositas."</strong></p>
+                <div class="selector-talla">
+                    <label>Size:</label>
+                    <select id="size-tote"><option value="OS">One Size Fits All</option></select>
+                </div>
+                <button class="btn-comprar" onclick="addToBag('Flash Tote Bag', 25, 'main-bag-product', 'size-tote')">Add to Bag</button>
+                <div class="detalles-tecnicos"><ul><li><strong>Material:</strong> 100% Heavyweight Cotton Canvas</li><li><strong>Dimensions:</strong> 40cm x 35cm</li></ul></div>
+            </div>
+        </main>
+    </div>
+
+    <div id="vista-checkout" class="vista">
+        <main class="checkout-container">
+            
+            <div class="bag-summary">
+                <h2>Your Bag</h2>
+                <div id="bag-items-container">
+                    <p style="color: #555;">Your bag is empty.</p>
+                </div>
+
+                <div class="bag-totals">
+                    <div class="totals-row">
+                        <span>Subtotal</span>
+                        <span id="bag-subtotal">€0.00</span>
+                    </div>
+                    <div class="totals-row">
+                        <span>Shipping</span>
+                        <span>Calculated at next step</span>
+                    </div>
+                    <div class="totals-row grand-total">
+                        <span>Total</span>
+                        <span id="bag-total">€0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-form">
+                <h2>Checkout</h2>
+                <form onsubmit="procesarPago(event)">
+                    
+                    <div class="form-group">
+                        <label>Contact Information</label>
+                        <input type="email" class="form-input" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 30px;">
+                        <label>Shipping Address</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><input type="text" class="form-input" placeholder="First Name" required></div>
+                        <div class="form-group"><input type="text" class="form-input" placeholder="Last Name" required></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Address" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><input type="text" class="form-input" placeholder="City" required></div>
+                        <div class="form-group"><input type="text" class="form-input" placeholder="Postal Code" required></div>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 30px;">
+                        <label>Payment Method (Simulation)</label>
+                        <input type="text" class="form-input" placeholder="Card Number (0000 0000 0000 0000)" required style="margin-bottom: 10px;">
+                        <div class="form-row">
+                            <div class="form-group"><input type="text" class="form-input" placeholder="MM/YY" required></div>
+                            <div class="form-group"><input type="text" class="form-input" placeholder="CVC" required></div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-pay">Pay Now</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <div id="vista-terms" class="vista">
+        <main class="legal-container">
+            <h1 class="producto-titulo">Terms & Conditions</h1>
+            <p>Welcome to Luck & Dice. By accessing this website, we assume you accept these terms and conditions. Do not continue to use Luck & Dice if you do not agree to take all of the terms and conditions stated on this page.</p>
+            
+            <h3>1. Intellectual Property Rights</h3>
+            <p>Other than the content you own, under these Terms, Luck & Dice and/or its licensors own all the intellectual property rights and materials contained in this Website.</p>
+            
+            <h3>2. Restrictions</h3>
+            <p>You are specifically restricted from publishing any Website material in any other media; selling, sublicensing and/or otherwise commercializing any Website material; publicly performing and/or showing any Website material; using this Website in any way that is or may be damaging to this Website.</p>
+            
+            <h3>3. Products and Pricing</h3>
+            <p>All products are subject to availability. We reserve the right to discontinue any product at any time. Prices for our products are subject to change without notice. We shall not be liable to you or to any third-party for any modification, price change, suspension or discontinuance of the Service.</p>
+
+            <h3>4. Governing Law & Jurisdiction</h3>
+            <p>These Terms will be governed by and interpreted in accordance with the laws of the applicable jurisdiction, and you submit to the non-exclusive jurisdiction of the state and federal courts located in us for the resolution of any disputes.</p>
+        </main>
+    </div>
+
+    <div id="vista-privacy" class="vista">
+        <main class="legal-container">
+            <h1 class="producto-titulo">Privacy Policy</h1>
+            <p>At Luck & Dice, accessible from our website, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Luck & Dice and how we use it.</p>
+            
+            <h3>1. Information we collect</h3>
+            <p>The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information. If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us.</p>
+            
+            <h3>2. How we use your information</h3>
+            <p>We use the information we collect in various ways, including to: Provide, operate, and maintain our website; Improve, personalize, and expand our website; Understand and analyze how you use our website; Develop new products, services, features, and functionality; Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and marketing and promotional purposes.</p>
+            
+            <h3>3. Cookies and Web Beacons</h3>
+            <p>Like any other website, Luck & Dice uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+        </main>
+    </div>
+
+    <div id="vista-returns" class="vista">
+        <main class="legal-container">
+            <h1 class="producto-titulo">Returns & Exchanges</h1>
+            <p>We want you to be completely satisfied with your Luck & Dice purchase. If for any reason you are not, we offer a straightforward return policy.</p>
+            
+            <h3>1. 14-Day Return Policy</h3>
+            <p>You have 14 days from the date of delivery to request a return or exchange for your items. After 14 days, unfortunately, we can’t offer you a refund or exchange.</p>
+            
+            <h3>2. Conditions for Returns</h3>
+            <p>To be eligible for a return, the item must be unused, in the same condition that you received it, and in its original packaging. Jewelry must not show any signs of wear, scratches, or damage.</p>
+            
+            <h3>3. How to Process a Return</h3>
+            <p>Please contact us at <strong>luckndice@gmail.com</strong> with your order number and reason for return. Our team will provide you with the return shipping address and instructions.</p>
+
+            <h3>4. Shipping Costs</h3>
+            <p>Customers are responsible for paying their own shipping costs for returning items. Shipping costs are non-refundable. If the item is defective or we made a mistake with your order, we will cover the return shipping costs.</p>
+
+            <h3>5. Refunds</h3>
+            <p>Once your return is received and inspected, we will notify you of the approval or rejection of your refund. If approved, your refund will be processed to your original method of payment within 5-7 business days.</p>
+        </main>
+    </div>
+
+    <div id="vista-contact" class="vista">
+        <main class="legal-container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <h1 class="producto-titulo" style="text-align: center; text-transform: uppercase;">CONTACT US</h1>
+            <p style="max-width: 600px; margin-bottom: 20px;">Have a question about your order, sizing, or our products? We're here to help.</p>
+            
+            <div class="contact-info" style="margin-bottom: 40px;">
+                <p><strong>Email:</strong> luckndice@gmail.com</p>
+                <p><strong>Customer Service:</strong> Monday - Friday, 10:00 AM - 6:00 PM (CET)</p>
+            </div>
+
+            <div class="checkout-form" style="width: 100%; max-width: 500px; background: transparent; padding: 0; box-shadow: none;">
+                <form id="contact-form" onsubmit="enviarContacto(event)" style="text-align: left;">
+                    
+                    <div class="form-group">
+                        <label style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Name</label>
+                        <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Email</label>
+                        <input type="email" name="email" class="form-input" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Message</label>
+                        <textarea name="message" class="form-input" rows="5" placeholder="How can we help you?" required style="resize: vertical; font-family: inherit;"></textarea>
+                    </div>
+                    
+                    <button type="submit" id="btn-submit-contact" class="btn-pay" style="margin-top: 20px; width: 100%;">SEND MESSAGE</button>
+                </form>
+
+                <div id="contact-success" style="display: none; padding: 20px; background: #222; border: 1px solid #444; text-align: center; margin-top: 20px;">
+                    <p style="margin: 0; font-size: 14px; color: #ffffff !important;">Your request has been sent, we will contact you shortly. Thank you.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col newsletter-col">
+                <h4>NEWSLETTER</h4>
+                <form action="https://gmail.us15.list-manage.com/subscribe/post?u=4dc814fbad9ffb3f540fbd432&amp;id=027a51d9c9&amp;f_id=00e7c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="newsletter-form validate" target="_blank">
+                    <div id="newsletter-inner">
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email" required>
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="b_4dc814fbad9ffb3f540fbd432_027a51d9c9" tabindex="-1" value="">
+                        </div>
+                        <button type="submit" name="subscribe" id="mc-embedded-subscribe">SUBSCRIBE</button>
+                    </div>
+                    <div id="newsletter-success" style="display: none; padding: 10px; background: #222; border: 1px solid #444; text-align: center;">
+                        <p style="margin: 0; font-size: 13px; color: #ffffff !important;">Thank you! You're on the list. Use code <strong style="color: #ffffff !important;">LUCK10</strong> for 10% off your first order.</p>
+                    </div>
+                </form>
+                
+                <div class="region-selector">
+                    <select><option value="eu">EUROPE (EUR €)</option><option value="us">UNITED STATES (USD $)</option></select>
+                </div>
+                <div class="footer-copy"><p>LUCK & DICE © 2026.</p></div>
+            </div>
+            <div class="footer-col">
+                <h4>HELP</h4>
+                <ul>
+                    <li><a onclick="cambiarVista('vista-contact')">Contact Us</a></li>
+                    <li><a onclick="cambiarVista('vista-returns')">Returns & Exchanges</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>SOCIAL</h4>
+                <ul>
+                    <li><a href="https://www.instagram.com/luckndice/" target="_blank">Instagram</a></li>
+                    <li><a href="#">TikTok</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>LEGAL</h4>
+                <ul>
+                    <li><a onclick="cambiarVista('vista-terms')">Terms & Conditions</a></li>
+                    <li><a onclick="cambiarVista('vista-privacy')">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="cookie-bar">
+            <p>This website uses cookies to improve your user and shopping experience.</p>
+            <div class="cookie-actions"><button class="cookie-btn">Accept</button><button class="cookie-btn">Decline</button></div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mc-embedded-subscribe-form').addEventListener('submit', function(e) {
+            document.getElementById('newsletter-inner').style.display = 'none';
+            document.getElementById('newsletter-success').style.display = 'block';
+        });
+
+        function cambiarVista(idVista, scrollTargetId = null) {
+            const vistas = document.querySelectorAll('.vista');
+            vistas.forEach(vista => vista.classList.remove('activa'));
+            
+            document.getElementById(idVista).classList.add('activa');
+            
+            if(idVista === 'vista-checkout') {
+                renderizarBag();
+            }
+            
+            // Si el usuario navega, reseteamos el formulario de contacto
+            if(idVista === 'vista-contact') {
+                document.getElementById('contact-form').style.display = 'block';
+                document.getElementById('contact-form').reset();
+                document.getElementById('btn-submit-contact').innerText = "SEND MESSAGE";
+                document.getElementById('btn-submit-contact').disabled = false;
+                document.getElementById('contact-success').style.display = 'none';
+            }
+            
+            if(scrollTargetId) {
+                setTimeout(() => { document.getElementById(scrollTargetId).scrollIntoView({behavior: 'smooth'}); }, 50);
+            } else {
+                window.scrollTo(0, 0);
+            }
+        }
+
+        function cambiarImagen(srcImagen, miniaturaElemento, idImagenPrincipal) {
+            document.getElementById(idImagenPrincipal).src = srcImagen;
+            let contenedorPadre = miniaturaElemento.parentNode;
+            let todasLasMiniaturas = contenedorPadre.querySelectorAll('img');
+            todasLasMiniaturas.forEach(img => img.classList.remove('activa'));
+            miniaturaElemento.classList.add('activa');
+        }
+
+        let bag = []; 
+
+        function addToBag(nombre, precio, imgId, selectId) {
+            let imgSrc = document.getElementById(imgId).src;
+            let tallaSelect = document.getElementById(selectId);
+            let talla = tallaSelect ? tallaSelect.options[tallaSelect.selectedIndex].text : 'OS';
+
+            bag.push({ nombre: nombre, precio: precio, imagen: imgSrc, talla: talla });
+            
+            document.getElementById('nav-bag-count').innerText = bag.length;
+            
+            alert(nombre + " added to your bag!");
+        }
+
+        function removeFromBag(index) {
+            bag.splice(index, 1); 
+            document.getElementById('nav-bag-count').innerText = bag.length;
+            renderizarBag(); 
+        }
+
+        function renderizarBag() {
+            let container = document.getElementById('bag-items-container');
+            let subtotalEl = document.getElementById('bag-subtotal');
+            let totalEl = document.getElementById('bag-total');
+            
+            container.innerHTML = '';
+            let total = 0;
+
+            if(bag.length === 0) {
+                container.innerHTML = '<p style="color: #555;">Your bag is empty.</p>';
+            } else {
+                bag.forEach((item, index) => {
+                    total += item.precio;
+                    container.innerHTML += `
+                        <div class="bag-item">
+                            <img src="${item.imagen}" alt="${item.nombre}">
+                            <div class="bag-item-details">
+                                <h4>${item.nombre}</h4>
+                                <p>Size: ${item.talla}</p>
+                            </div>
+                            <span class="bag-item-price">€${item.precio.toFixed(2)}</span>
+                            <button class="btn-remove" onclick="removeFromBag(${index})">Remove</button>
+                        </div>
+                    `;
+                });
+            }
+
+            subtotalEl.innerText = '€' + total.toFixed(2);
+            totalEl.innerText = '€' + total.toFixed(2);
+        }
+
+        function procesarPago(event) {
+            event.preventDefault(); 
+            if(bag.length === 0) {
+                alert("Your bag is empty! Add some items before paying.");
+                return;
+            }
+            alert("Payment Successful! Thank you for your purchase. (This is a simulation)");
+            bag = []; 
+            document.getElementById('nav-bag-count').innerText = "0";
+            cambiarVista('vista-inicio');
+        }
+
+        // --- SISTEMA FUNCIONAL DE ENVÍO DE CORREO (CONTACT US) ---
+        function enviarContacto(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const btn = document.getElementById('btn-submit-contact');
+            const formData = new FormData(form);
+
+            // Generamos un "Asunto" único para evitar que Gmail agrupe los correos en un solo hilo
+            const uniqueSubject = "New Message from " + formData.get("name") + " - ID: " + Date.now();
+            formData.append("_subject", uniqueSubject);
+
+            btn.innerText = "SENDING...";
+            btn.disabled = true;
+
+            fetch("https://formsubmit.co/ajax/luckndice@gmail.com", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                form.style.display = 'none';
+                document.getElementById('contact-success').style.display = 'block';
+            })
+            .catch(error => {
+                alert("Oops! There was a problem submitting your form. Please try again.");
+                btn.innerText = "SEND MESSAGE";
+                btn.disabled = false;
+                console.log(error);
+            });
+        }
+    </script>
+</body>
+</html>
