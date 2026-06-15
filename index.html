@@ -3,8 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luck & Dice | accessories and jewelry</title>
+    <title>Luck & Dice | Tattoo Artists & Creators</title>
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        @media (max-width: 768px) {
+            /* 1. Carrusel de productos (Joyas y Accesorios) */
+            .grid-productos {
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                scroll-snap-type: x mandatory;
+                gap: 15px !important;
+                padding-bottom: 20px !important;
+                margin-left: -10px;
+                margin-right: -10px;
+                padding-left: 10px;
+                padding-right: 10px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none; /* Ocultar barra en Firefox */
+            }
+            .grid-productos::-webkit-scrollbar {
+                display: none; /* Ocultar barra en Chrome/Safari */
+            }
+            .producto-card {
+                flex: 0 0 75% !important; /* Muestra un 75% de la tarjeta para invitar a hacer scroll */
+                scroll-snap-align: center;
+            }
+
+            /* 2. Banner separador compacto (3 imágenes en una fila) */
+            .banner-separador {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                gap: 5px !important;
+                margin: 20px 0 !important;
+            }
+            .banner-separador img {
+                width: 32% !important;
+                height: 120px !important;
+                object-fit: cover !important;
+            }
+
+            /* 3. Footer reordenado */
+            .footer-grid {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 20px !important;
+            }
+            .newsletter-col {
+                grid-column: 1 / -1 !important;
+            }
+            .help-col {
+                grid-column: 1 / 2 !important;
+                text-align: left !important;
+            }
+            .legal-col {
+                grid-column: 2 / 3 !important;
+                text-align: right !important;
+            }
+            .social-col {
+                grid-column: 1 / -1 !important;
+                text-align: center !important;
+                margin-top: 10px !important;
+                padding-top: 20px !important;
+                border-top: 1px solid #333 !important; /* Línea sutil para separar lo social */
+            }
+            .social-col ul {
+                display: flex !important;
+                justify-content: center !important;
+                gap: 20px !important;
+                padding: 0 !important;
+            }
+            .social-col ul li {
+                margin: 0 !important;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -453,25 +528,26 @@
                 </div>
                 <div class="footer-copy"><p>LUCK & DICE © 2026.</p></div>
             </div>
-            <div class="footer-col">
+            
+            <div class="footer-col help-col">
                 <h4>HELP</h4>
                 <ul>
                     <li><a onclick="cambiarVista('vista-contact')">Contact Us</a></li>
                     <li><a onclick="cambiarVista('vista-returns')">Returns & Exchanges</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>SOCIAL</h4>
-                <ul>
-                    <li><a href="https://www.instagram.com/luckndice/" target="_blank">Instagram</a></li>
-                    <li><a href="#">TikTok</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
+            <div class="footer-col legal-col">
                 <h4>LEGAL</h4>
                 <ul>
                     <li><a onclick="cambiarVista('vista-terms')">Terms & Conditions</a></li>
                     <li><a onclick="cambiarVista('vista-privacy')">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col social-col">
+                <h4>SOCIAL</h4>
+                <ul>
+                    <li><a href="https://www.instagram.com/luckndice/" target="_blank">Instagram</a></li>
+                    <li><a href="#">TikTok</a></li>
                 </ul>
             </div>
         </div>
@@ -497,7 +573,6 @@
                 renderizarBag();
             }
             
-            // Si el usuario navega, reseteamos el formulario de contacto
             if(idVista === 'vista-contact') {
                 document.getElementById('contact-form').style.display = 'block';
                 document.getElementById('contact-form').reset();
@@ -584,7 +659,6 @@
             cambiarVista('vista-inicio');
         }
 
-        // --- SISTEMA FUNCIONAL DE ENVÍO DE CORREO (CONTACT US) ---
         function enviarContacto(event) {
             event.preventDefault();
             
@@ -592,7 +666,6 @@
             const btn = document.getElementById('btn-submit-contact');
             const formData = new FormData(form);
 
-            // Generamos un "Asunto" único para evitar que Gmail agrupe los correos en un solo hilo
             const uniqueSubject = "New Message from " + formData.get("name") + " - ID: " + Date.now();
             formData.append("_subject", uniqueSubject);
 
